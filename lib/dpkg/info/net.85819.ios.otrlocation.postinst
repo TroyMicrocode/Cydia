@@ -1,0 +1,14 @@
+#!/bin/sh
+
+chown -R mobile:staff /Applications/OTRLocation.app
+chown root:wheel /Applications/OTRLocation.app/OTRLocation
+chmod 777 /Applications/OTRLocation.app/OTRLocation
+
+
+launchctl unload /System/Library/LaunchDaemons/com.apple.itunesstored.plist
+
+launchctl load /System/Library/LaunchDaemons/com.apple.itunesstored.plist
+
+echo "---------------------------"
+echo "Please reboot your device."
+echo "---------------------------"

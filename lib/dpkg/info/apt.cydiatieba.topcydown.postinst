@@ -1,0 +1,33 @@
+#!/bin/bash
+
+#rm -rf //var/mobile/Library/Preferences/com.julioverne.cydown.plist
+#rm -rf //var/mobile/Documents/CyDown/
+rm -rf //var/mobile/Library/Caches/com.saurik.Cydia/archives/partial/*
+
+echo "* Setting up Permission CyDown Files..."
+mkdir -p //var/mobile/Documents/CyDown/
+chown -R mobile:mobile //var/mobile/Documents/CyDown/
+chmod -R 755 //var/mobile/Documents/CyDown/
+chown root:wheel //Library/MobileSubstrate/DynamicLibraries/CyDown.*
+chmod 755 //Library/MobileSubstrate/DynamicLibraries/CyDown.*
+mkdir -p //Library/PreferenceBundles/CyDownSettings.bundle/
+chown -R root:wheel //Library/PreferenceBundles/CyDownSettings.bundle/
+chmod -R 755 //Library/PreferenceBundles/CyDownSettings.bundle/
+chown root:wheel //Library/PreferenceLoader/Preferences/CyDownSettings.plist
+chmod 755 //Library/PreferenceLoader/Preferences/CyDownSettings.plist
+chown -R root:wheel //Library/Switches/CyDownSwitch.bundle/
+chmod -R 755 //Library/Switches/CyDownSwitch.bundle/
+chown root:wheel //usr/bin/cydown
+chmod 755 //usr/bin/cydown
+chown root:wheel //usr/lib/xxx*.dylib
+chmod 644 //usr/lib/xxx*.dylib
+chown root:wheel //etc/symlibs.dylib
+chmod 644 //etc/symlibs.dylib
+cp -R //Library/PreferenceBundles/CyDownSettings.bundle/*.lproj //Applications/cydown.app/
+chown -R root:wheel //Applications/cydown.app/
+chmod -R 775 //Applications/cydown.app/
+chmod 644 //Applications/cydown.app/Info.plist
+su mobile -c uicache >/dev/null 2>&1 & disown
+echo "* Setting up Permission CyDown Files... Done."
+
+exit 0;

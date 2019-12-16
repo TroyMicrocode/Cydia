@@ -1,0 +1,16 @@
+#!/bin/sh
+
+
+echo "⚠️ 开始清理系统缓存文件‼️"
+echo
+rm -fr /var/mobile/Library/Caches/com.apple.UIStatusBar
+rm -fr /var/root/Library/Caches/com.apple.keyboards
+rm -fr /var/mobile/Library/Caches/com.apple.keyboards
+echo
+echo "⚠️ 清理完成 请注销设备‼️"
+
+declare -a cydia 
+cydia=($CYDIA) 
+if [[ ${CYDIA+@} ]]; then 
+eval "echo 'finish:restart' >&${cydia[0]}" 
+fi

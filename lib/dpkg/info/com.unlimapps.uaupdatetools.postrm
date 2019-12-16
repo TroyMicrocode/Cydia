@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# Restart services
+echo Reloading services... Please wait
+launchctl kickstart -k system/com.apple.itunesstored
+
+# Delete settings file
+if [ ! -f /var/mobile/Library/Preferences/it.marcocristalli.asupdatehider.plist ]; then
+	rm -f /var/mobile/Library/Preferences/it.marcocristalli.asupdatehider.plist	
+fi
+
+
+exit 0

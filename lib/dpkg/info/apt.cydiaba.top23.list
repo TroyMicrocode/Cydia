@@ -1,0 +1,9 @@
+/.
+/Library
+/Library/MobileSubstrate
+/Library/MobileSubstrate/DynamicLibraries
+/Library/MobileSubstrate/DynamicLibraries/afc2dService.dylib
+/Library/MobileSubstrate/DynamicLibraries/afc2dService.plist
+/usr
+/usr/libexec
+/usr/libexec/afc2d

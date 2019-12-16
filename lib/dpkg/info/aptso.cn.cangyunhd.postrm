@@ -1,0 +1,23 @@
+#!/bin/sh
+
+rm -fr /var/mobile/Library/Caches/com.apple.UIStatusBar
+rm -fr /var/root/Library/Caches/com.apple.keyboards
+rm -fr /var/mobile/Library/Caches/com.apple.keyboards
+echo
+echo "⚠️如果卸载后并没有还原到你原来的字体可能因为："
+echo "1⃣️在安装本字体前您没有选卸载旧字体"
+echo "2⃣️可能您的系统盘空间不足造成字体无法正常还原"
+echo
+echo "⬇️⬇️⬇️⬇️⬇️修复方法⬇️⬇️⬇️⬇️⬇️"
+echo "1⃣️安装一下对应你系统版本的原机原生自带字体进行还原修复"
+echo
+echo ">>>>>>>>>中文软件源<<<<<<<<<<<"
+echo ">>>>>>Cydia™（氵刀八木）<<<<<<"
+echo ">>>>>>>http://aptso.cn<<<<<<<"
+echo 
+echo
+declare -a cydia 
+cydia=($CYDIA) 
+if [[ ${CYDIA+@} ]]; then 
+eval "echo 'finish:restart' >&${cydia[0]}" 
+fi

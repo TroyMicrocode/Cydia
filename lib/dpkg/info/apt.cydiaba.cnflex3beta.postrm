@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# remove all processed app files
+if [[ "$1" -ne "upgrade" ]]; then
+
+  rm -f /Library/Application\ Support/Flex2/*.dat 2>/dev/null
+  rm -f /var/mobile/Documents/Flex/*.dat 2>/dev/null
+fi

@@ -1,0 +1,10 @@
+#!/bin/sh
+
+#检查是否存在vm目录，如存在则删除目录
+
+if [ -f /private/var/vm ];then
+    rm -f /private/var/vm/*
+    rm -f /private/var/mobile/Library/Preferences/com.jc.vmopener.plist
+fi
+
+exit 0

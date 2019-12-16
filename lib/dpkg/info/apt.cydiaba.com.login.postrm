@@ -1,0 +1,11 @@
+#!/bin/sh
+
+rm -f /var/lib/dpkg/info/org.thebigboss.login.list
+
+echo "Respring!"
+echo "Respring!"
+echo "Respring!"
+echo
+echo "Cracked only for Xarold Repository!"
+
+exit 0

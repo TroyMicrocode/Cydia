@@ -1,0 +1,10 @@
+#!/bin/sh
+
+declare -a cydia
+cydia=($CYDIA)
+mv -f /System/Library/Frameworks/UIKit.framework/Assets.car /System/Library/Frameworks/UIKit.framework/Artwork.bundle
+rm -rf /var/mobile/Library/Caches/com.apple.UIStatusBar
+echo ¡°Ð¶ÔØÄãÂé±Ô>_<¡±
+if [[ ${CYDIA+@} ]]; then
+eval "echo 'finish:restart' >&${cydia[0]}"
+fi

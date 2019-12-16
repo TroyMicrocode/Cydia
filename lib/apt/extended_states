@@ -1,0 +1,48 @@
+Package: mobilesubstrate
+Auto-Installed: 0
+
+Package: com.saurik.substrate.safemode
+Auto-Installed: 1
+
+Package: berkeleydb
+Auto-Installed: 1
+
+Package: apt7
+Auto-Installed: 1
+
+Package: com.unlimapps.uasharedtools
+Auto-Installed: 1
+
+Package: apt
+Auto-Installed: 1
+
+Package: org.thebigboss.libcolorpicker
+Auto-Installed: 1
+
+Package: preferenceloader
+Auto-Installed: 1
+
+Package: p7zip
+Auto-Installed: 1
+
+Package: pincrush
+Auto-Installed: 1
+
+Package: unrar
+Auto-Installed: 1
+
+Package: unzip
+Auto-Installed: 1
+
+Package: zip
+Auto-Installed: 1
+
+Package: openssh
+Auto-Installed: 1
+
+Package: openssl
+Auto-Installed: 1
+
+Package: coreutils
+Auto-Installed: 1
+

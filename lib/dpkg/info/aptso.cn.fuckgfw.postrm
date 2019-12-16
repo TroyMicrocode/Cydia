@@ -1,0 +1,16 @@
+#!/bin/bash
+
+  if [ -f /etc/hosts_bak ]; then
+    rm -f /etc/hosts
+    mv /etc/hosts_bak /etc/hosts
+    echo "还原成功"
+  else
+    echo "还原失败！因为找不到文件！"
+  fi
+
+echo "安装后请重新打开需要翻墙的应用程序"
+
+echo ">>>>>>>>>中文软件源<<<<<<<<<<<"
+echo ">>>>>>Cydia™（氵刀八木）<<<<<<"
+echo ">>>>>>>http://aptso.cn<<<<<<<"
+echo 

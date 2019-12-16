@@ -1,0 +1,17 @@
+#!/bin/sh
+
+case "$1" in
+  purge|remove|disappear)
+    if [ -d '/var/mobile/Library/Preferences/uasharedtoolstmp/' ]; then
+    	echo "Removing temp UASharedTools files at: '/var/mobile/Library/Preferences/uasharedtoolstmp'"
+      	rm -rf '/var/mobile/Library/Preferences/uasharedtoolstmp'
+    fi
+  ;;
+
+  *)
+    exit 0
+  ;;
+
+esac
+
+exit 0
